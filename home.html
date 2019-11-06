@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,26 +6,32 @@
 	<title>Home</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Mansalva|Montserrat&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/1a1e8427ab.js" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/animate.css">
+	
 	
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  	
-  	<script src="https://kit.fontawesome.com/1a1e8427ab.js" crossorigin="anonymous"></script>
+  	   	
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="javaScript/parallax.js"></script>
 
    	<style>
 
 		@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
 		body {
-		  background: black;
+		  background-color: black;
 		  font-family: 'Open Sans', sans-serif;
-		  font-weight: 600;
+/*		  font-weight: 600;*/
 		  font-size: 40px;
+		  overflow-x: hidden;
+		  overflow-y: hidden;
 		}
 
 		.text {
@@ -33,7 +40,7 @@
 		  left: 50%;
 		  margin-left: -225px;
 		  height: 40px;
-		  top: 48%;
+		  top: 36%;
 		  margin-top: -20px;
 		}
 
@@ -83,15 +90,13 @@
 		  color: #c0392b;
 		}
 
-		.green {
-		  color: #16a085;
-		}
-
-		.midnight {
-		  color: #2c3e50;
+		.green{
+			color: lawngreen;
 		}
 		
-
+		.midnight {
+		  color: #f63;
+		}
 		
 		.text-js{
 		 	opacity: 0;
@@ -104,7 +109,7 @@
 		  right: -5px;
 		  width: 2px;
 		  /* Change colour of Cursor Here */
-		  background-color: white;
+/*		  background-color: white;*/
 		  z-index: 1;
 		  animation: flash 0.5s none infinite alternate;
 		}
@@ -120,8 +125,8 @@
 		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 		*{
-		  margin: 0;
-		  padding: 0;
+/*		  margin: 0;*/
+/*		  padding: 0;*/
 		  box-sizing: border-box;
 		  font-family: "Open Sans", sans-serif
 		}
@@ -130,12 +135,15 @@
 		  justify-content: center;
 		}
 		.headline{
-		  margin-top: -200px;
 		  font-size: 13.3px;
 		  text-align: center;
-		  p{
+		  p {
 			letter-spacing: 1.6px;
 		  }
+		}
+		
+		.font{
+			font-family: 'Montserrat', sans-serif;
 		}
 
 
@@ -143,26 +151,44 @@
 
 </head>
 <body>
-	<div class="jumbotron" style="background-color: black; text-align: left; font-family: 'Montserrat', sans-serif;">
-		<h1>goward <i class="fas fa-shopping-bag"></i></h1>
-		<div class="type-js headline">
-		  <p class="text-js">Because sharing is caring!</p>
-		</div>
-	</div>
 	
-
-	<div class="text">
-	  <p>Wardrobe for</p>
-	  <p>
-		<span class="word wisteria">Women.</span>
-		<span class="word belize">Men.</span>
-		<span class="word pomegranate">kids.</span>
-		<span class="word green">Couple.</span>
-		<span class="word midnight">Everyone.</span>
-	  </p>
-	</div>
-	
+		<nav class="navbar navbar-inverse navbar-fixed-top" style="background: black; opacity: 1.0;">
+			<div class="container-fluid">
+			<div class="navbar-header"> 	
+			  <a class="navbar-brand animated infinite flash" style="font-size: 0.95em; color: orange;" href="#">goward</a>
+			</div>
+			<ul class="nav navbar-nav">
+			  <li class="active" style="font-size: 0.6em;"><a href="#">Home</a></li>
+			  <li><a href="feature.html" style="font-size: 0.6em;">Feature</a></li>
+			  <li><a href="about.html" style="font-size: 0.6em;">About</a></li>
+			  <li><a href="#" style="font-size: 0.6em;">Contact</a></li>
+			</ul>
+		  </div>
+		</nav>
 		
+		<div class="parallax-window" data-parallax="scroll" data-image-src="images/blazer-close-up-closet-1682699.jpg" style="height: 1000px; color: aliceblue; opacity: 0.6; background-color: black;">
+			
+			<div  style="text-align: left; font-family: 'Montserrat', sans-serif; margin-top: -1.5%;">
+				<br>
+				<div class="jumbotron font" style="background-color: black;"><h1 style="opacity: 0.83; color: pink;">goward <i class="fas fa-shopping-bag"></i></h1>
+					<div class="type-js headline">
+						<p class="text-js font" style="opacity: 0.83; color: pink;">Because sharing is caring!</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="text">
+			  <p>Wardrobe for</p>
+			  <p>
+				<span class="word wisteria">Women.</span>
+				<span class="word belize">Men.</span>
+				<span class="word pomegranate">kids.</span>
+				<span class="word green">Couple.</span>
+				<span class="word midnight">Everyone.</span>
+			  </p>
+			</div>
+		</div>
 	
 	<script>
 		var words = document.getElementsByClassName('word');

@@ -4,9 +4,15 @@
 	<meta charset="UTF-8">
 	<title>Welcome</title>
 	
-	 <frameset cols = "64%,36%">
-     	<frame name = "left" src = "home.html" />
-     	<frame name = "right" src = "signup.php" />
+	<style>
+		html, head, frameset{
+			overflow-y: hidden; 
+		}
+	</style>
+	
+	 <frameset cols = "64%,36%" id="fs">
+     	<frame name = "left" src = "home.html" scrollbar="no" />
+     	<frame name = "right" src = "signin.php" scrollbar="no" />
 	</frameset>
 </head>
 
